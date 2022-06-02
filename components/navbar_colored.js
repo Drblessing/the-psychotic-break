@@ -1,18 +1,7 @@
 import React, { useState } from "react";
-import {
-  ActionIcon,
-  useMantineColorScheme,
-  createStyles,
-  Header,
-  Container,
-  Group,
-  Burger,
-  Button,
-} from "@mantine/core";
+import { createStyles, Header, Container, Group, Burger } from "@mantine/core";
 import { useBooleanToggle } from "@mantine/hooks";
-import Image from "next/image";
-import { Sun, Moon } from "tabler-icons-react";
-import Link from "next/link";
+import { MantineLogo } from "./mantinelogo";
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -68,48 +57,34 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export default function HeaderSimple({ links }) {
-  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
-  const dark = colorScheme === "dark";
   const [opened, toggleOpened] = useBooleanToggle(false);
   const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();
 
   const items = links.map((link) => (
-    <Link href={link.link} passHref>
-      <a
-        key={link.label}
-        href={link.link}
-        className={cx(classes.link, {
-          [classes.linkActive]: active === link.link,
-        })}
-        onClick={(event) => {
-          // event.preventDefault();
-          setActive(link.link);
-        }}
-      >
-        {link.label}
-      </a>
-    </Link>
+    <a
+      key={link.label}
+      href={link.link}
+      className={cx(classes.link, {
+        [classes.linkActive]: active === link.link,
+      })}
+      onClick={(event) => {
+        event.preventDefault();
+        setActive(link.link);
+      }}
+    >
+      {link.label}
+    </a>
   ));
 
   return (
     <Header height={60} mb={120}>
       <Container className={classes.header}>
-        <Group>
-          <Image src="/logo.png" alt="Podcast Logo" width={50} height={50} />
-          <h3>The Psychotic Break</h3>
-        </Group>
+        <MantineLogo />
         <Group spacing={5} className={classes.links}>
           {items}
-          <ActionIcon
-            variant="outline"
-            color={dark ? "yellow" : "blue"}
-            onClick={() => toggleColorScheme()}
-            title="Toggle color scheme"
-          >
-            {dark ? <Sun size={18} /> : <Moon size={18} />}
-          </ActionIcon>
         </Group>
+
         <Burger
           opened={opened}
           onClick={() => toggleOpened()}

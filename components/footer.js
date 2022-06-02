@@ -1,7 +1,14 @@
 import React from "react";
 import { createStyles, Container, Group, ActionIcon } from "@mantine/core";
-import { BrandTwitter, BrandYoutube, BrandInstagram } from "tabler-icons-react";
-// import { MantineLogo } from "../../shared/MantineLogo";
+import {
+  BrandTwitter,
+  BrandYoutube,
+  BrandInstagram,
+  BrandApple,
+  brandSpotify,
+  BrandSpotify,
+} from "tabler-icons-react";
+import Image from "next/image";
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -36,15 +43,29 @@ export default function FooterSocial() {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
+        <Image src="/logo.png" alt="Podcast Logo" width={50} height={50} />
         <Group spacing={0} className={classes.links} position="right" noWrap>
-          <ActionIcon size="lg">
-            <BrandTwitter size={18} />
-          </ActionIcon>
-          <ActionIcon size="lg">
-            <BrandYoutube size={18} />
-          </ActionIcon>
-          <ActionIcon size="lg">
+          Listen Here!
+          <ActionIcon
+            size="lg"
+            component="a"
+            href="https://www.instagram.com/thepsychoticbreak.pod/"
+          >
             <BrandInstagram size={18} />
+          </ActionIcon>
+          <ActionIcon
+            size="lg"
+            component="a"
+            href="https://open.spotify.com/show/5jCQqIioRyHZ45jalq74rd"
+          >
+            <BrandSpotify size={18} />
+          </ActionIcon>
+          <ActionIcon
+            size="lg"
+            component="a"
+            href="https://podcasts.apple.com/us/podcast/the-psychotic-break/id1565616045"
+          >
+            <BrandApple size={18} />
           </ActionIcon>
         </Group>
       </Container>
