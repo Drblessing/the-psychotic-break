@@ -9,7 +9,7 @@ import bumblebee from "../themes/bumblebee";
 import { useState } from "react";
 
 export default function App(props) {
-  const [colorScheme, setColorScheme] = useState("light");
+  const [colorScheme, setColorScheme] = useState("dark");
   const { Component, pageProps } = props;
   const toggleColorScheme = (value) =>
     setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));

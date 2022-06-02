@@ -75,7 +75,7 @@ export default function HeaderSimple({ links }) {
   const { classes, cx } = useStyles();
 
   const items = links.map((link) => (
-    <Link href={link.link} passHref>
+    <Link href={link.link} key={link.label} passHref>
       <a
         key={link.label}
         href={link.link}
