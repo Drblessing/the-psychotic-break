@@ -8,6 +8,13 @@ import Link from "next/link";
 
 import styles from "../styles/Home.module.css";
 
+// Todo purchase http://psychbreak.io/ and link it to the website
+// Todo setup hello@psychbreak.io
+// Todo link contact us form to send email to hello@psychbreak.io
+// Todo add legal disclaimer
+// Todo add privacy policy
+// Todo add terms of service
+
 function ProfilePic({ name, about, src }) {
   return (
     <div>
