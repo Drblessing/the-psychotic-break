@@ -11,6 +11,7 @@ import styles from "../styles/Home.module.css";
 // Todo purchase http://psychbreak.io/ and link it to the website
 // Todo setup hello@psychbreak.io
 // Todo link contact us form to send email to hello@psychbreak.io
+// Todo change contact us form to feedback hello@psychbreak.io
 // Todo add legal disclaimer
 // Todo add privacy policy
 // Todo add terms of service
@@ -19,11 +20,11 @@ function ProfilePic({ name, about, src }) {
   return (
     <div>
       <Image
-        priority
+        // priority
         align="center"
         src={src}
-        height={1080 / 2}
-        width={811 / 2}
+        height="80%"
+        width="80%"
         alt="Madey"
       />
       <Text
@@ -58,17 +59,18 @@ export default function Home() {
           <a href="https://open.spotify.com/show/5jCQqIioRyHZ45jalq74rd">
             The Psychotic Break!
           </a>
-          <br></br>
-          <br></br>
-          <Image
-            src="/logo.png"
-            alt="Podcast Logo"
-            align="center"
-            width={626 / 1.2}
-            height={626 / 1.2}
-          />
-          <br></br>
         </h1>
+        <br></br>
+        <br></br>
+        <Image
+          src="/logo.png"
+          alt="Podcast Logo"
+          align="center"
+          width="70%"
+          height="70%"
+        />
+        <br></br>
+
         <Container size={1200}>
           <SimpleGrid cols={2} spacing="sm">
             <div>
@@ -91,13 +93,10 @@ export default function Home() {
         {/* <p className={styles.description}>Get started with </p> */}
 
         <div className={styles.grid}>
-          <Link href="/contact">
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Contact Us &rarr;</h2>
-              <p>
-                Schedule an in-depth consultation for counseling! Not medical
-                advice.{" "}
-              </p>
+          <Link href="/merchandise ">
+            <a className={styles.card}>
+              <h2>Merch &rarr;</h2>
+              <p> </p>
             </a>
           </Link>
           <Link href="/learn" passHref>

@@ -96,8 +96,19 @@ export default function HeaderSimple({ links }) {
     <Header height={60} mb={120}>
       <Container className={classes.header}>
         <Group>
-          <Image src="/logo.png" alt="Podcast Logo" width={50} height={50} />
-          <h3>The Psychotic Break</h3>
+          <Link href="/">
+            <a>
+              <Image
+                src="/logo.png"
+                alt="Podcast Logo"
+                width={50}
+                height={50}
+              />
+            </a>
+          </Link>
+          <Link href="/">
+            <h3>The Psychotic Break</h3>
+          </Link>
         </Group>
         <Group spacing={5} className={classes.links}>
           {items}

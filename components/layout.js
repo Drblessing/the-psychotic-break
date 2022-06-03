@@ -10,8 +10,8 @@ const links = [
     label: "About",
   },
   {
-    link: "/contact",
-    label: "Contact",
+    link: "/merchandise",
+    label: "Merch",
   },
   {
     link: "/learn",
