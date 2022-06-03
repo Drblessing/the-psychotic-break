@@ -1,6 +1,6 @@
 // components/layout.js
 import Navbar from "./navbar";
-import NavbarColored from "./navbar_colored";
+import ResponsiveNavbar from "./header.js";
 import Footer from "./footer.js";
 import { createStyles, Header, Container, Group, Burger } from "@mantine/core";
 
@@ -26,7 +26,7 @@ const links = [
 export default function Layout({ children }) {
   return (
     <>
-      <Navbar links={links} />
+      <ResponsiveNavbar links={links} />
       <main>{children}</main>
       <Footer />
     </>
