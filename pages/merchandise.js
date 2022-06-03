@@ -9,7 +9,7 @@ export default function Merch() {
   return (
     <main className={styles.main}>
       <h1 className={styles.title}>
-        Hang On, we're sending you to our merch store!
+        Hang On, we&apos;re sending you to our merch store!
       </h1>
     </main>
   );
