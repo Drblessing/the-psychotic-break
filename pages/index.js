@@ -83,7 +83,7 @@ export default function Home() {
             <div>
               <ProfilePic
                 name="Kimi Eng"
-                about="Part-time Canadian"
+                about="Part-time Canadian, rising senior at the University of British Columbia"
                 src="/kimi_rounded.png"
               />
             </div>
