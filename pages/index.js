@@ -96,7 +96,7 @@ export default function Home() {
           <Link href="/merchandise ">
             <a className={styles.card}>
               <h2>Merch &rarr;</h2>
-              <p> </p>
+              <p>Support the Podcast!</p>
             </a>
           </Link>
           <Link href="/learn" passHref>
